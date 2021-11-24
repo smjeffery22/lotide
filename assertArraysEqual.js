@@ -7,7 +7,6 @@ const assertArraysEqual = function(arrayOne, arrayTwo) {
 // If all true, return true
 // If at least one is false, return false
 const eqArrays = function(arrayOne, arrayTwo) {
-  let check = true;
   if (arrayOne.length !== arrayTwo.length) {
     return false;
   }
