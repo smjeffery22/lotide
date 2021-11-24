@@ -8,18 +8,16 @@ const assertEqual = function(actual, expected) {
 // If all true, return true
 // If at least one is false, return false
 const eqArrays = function(arrayOne, arrayTwo) {
-  let check = true;
   if (arrayOne.length !== arrayTwo.length) {
     return false;
   }
   
   for (let i = 0; i < arrayOne.length; i++) {
-    arrayOne[i] === arrayTwo[i] ? check = true : check = false;
-    if (check === false) {
+    if (arrayOne[i] !== arrayTwo[i]) {
       return false;
     }
   }
-  return check;
+  return true;
 };
 
 // TEST CODE
