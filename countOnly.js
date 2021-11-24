@@ -7,21 +7,21 @@ const assertEqual = function(actual, expected) {
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
 
-for (const item of allItems) {
-  console.log(item);
-  // Executed to count if the name is stored in itemsToCount object
-  if (itemsToCount[item]) {
-    if (results[item]) {
-      // Add item as key to results object and the count as value
-      // If it already exists in results object
-      results[item] += 1;
-    } else {
-      // Add item as key to results object and the count as value
-      // If it does not already exist in results object
-      results[item] = 1;
+  for (const item of allItems) {
+    console.log(item);
+    // Executed to count if the name is stored in itemsToCount object
+    if (itemsToCount[item]) {
+      if (results[item]) {
+        // Add item as key to results object and the count as value
+        // If it already exists in results object
+        results[item] += 1;
+      } else {
+        // Add item as key to results object and the count as value
+        // If it does not already exist in results object
+        results[item] = 1;
+      }
     }
   }
-}
   return results;
 };
 
