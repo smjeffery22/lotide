@@ -25,5 +25,5 @@ console.log(countLetters("L H L"));
 console.log(countLetters("lighthouse in the house"));
 console.log(countLetters("   "));
 
-// console.log(assertEqual((countLetters("LHL"))["L"], 2));
-// console.log(assertEqual((countLetters("LHL"))["H"], 1));
+console.log(assertEqual((countLetters("LHL"))["L"], 2));
+console.log(assertEqual((countLetters("LHL"))["H"], 1));
