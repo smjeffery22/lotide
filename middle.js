@@ -1,9 +1,3 @@
-const eqArrays = require("./eqArrays");
-
-// const assertArraysEqual = function(arrayOne, arrayTwo) {
-//   console.log(eqArrays(arrayOne, arrayTwo) === true ? "✅" : "🛑");
-// };
-
 // ACTUAL FUNCTION
 // Take an array and return an array with only the middle element(s)
 const middle = function(array) {
