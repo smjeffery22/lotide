@@ -1,20 +1,8 @@
-// TEST/ASSERTION FUNCTIONS
-const eqArrays = function(arrayOne, arrayTwo) {
-  if (arrayOne.length !== arrayTwo.length) {
-    return false;
-  }
-  
-  for (let i = 0; i < arrayOne.length; i++) {
-    if (arrayOne[i] !== arrayTwo[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+const eqArrays = require("./eqArrays");
 
-const assertArraysEqual = function(arrayOne, arrayTwo) {
-  console.log(eqArrays(arrayOne, arrayTwo) === true ? "✅" : "🛑");
-};
+// const assertArraysEqual = function(arrayOne, arrayTwo) {
+//   console.log(eqArrays(arrayOne, arrayTwo) === true ? "✅" : "🛑");
+// };
 
 // ACTUAL FUNCTION
 // Take an array and return an array with only the middle element(s)
@@ -44,22 +32,4 @@ const middle = function(array) {
   }
 };
 
-// TEST CODE
-
-console.log(middle([])); // => []
-assertArraysEqual(middle([]), []);
-console.log(middle([1])); // => []
-assertArraysEqual(middle([1]), []);
-console.log(middle([1, 2])); // => []
-assertArraysEqual(middle([1, 2]), []);
-
-console.log(middle([1, 2, 3])); // => [2]
-assertArraysEqual(middle([1, 2, 3]), [2]);
-console.log(middle([1, 2, 3, 4, 5])); // => [3]
-assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]);
-
-console.log(middle([1, 2, 3, 4])); // => [2, 3]
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
-console.log(middle([1, 2, 3, 4, 5, 6])); // => [3, 4]
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3]);
+module.exports = middle;
